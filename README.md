@@ -20,14 +20,14 @@ I think uipath downloads from the 'main', not master
 ![[UiPath, Github Clone from default branch.png]]
 
 
-## Solution
+# Solution
 **Github repo. Settings>Branches>Set the default to the one that you require.**
 Where the project.json and xaml files are at.
 
 Then UiPath would be able to clone it.
 
 
-# further things to research
+## further things to research
 I am not sure, but might be possible to change branches etc thereafter.
 I need to figure out what branches are.
 
