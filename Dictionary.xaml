@@ -1,0 +1,112 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Dictionary" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="716.8,1949.6" sap2010:WorkflowViewState.IdRef="Dictionary_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:maes="clr-namespace:Microsoft.Activities.Extensions.Statements;assembly=Microsoft.Activities.Extensions" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Microsoft.Activities.Extensions.Statements</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities.Extensions</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Dictionary" sap:VirtualizedContainerService.HintSize="439.2,2256" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:IDictionary(x:String, x:Int32)" Default="[New Dictionary(of String,int32)]" Name="EmployeeDetails" />
+      <Variable x:TypeArguments="x:Int32" Name="intTemp" />
+      <Variable x:TypeArguments="x:Boolean" Name="boolTemp" />
+      <Variable x:TypeArguments="x:Boolean" Name="strTemp" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <maes:AddToDictionary x:TypeArguments="x:String, x:Int32" Dictionary="[EmployeeDetails]" DisplayName="Add to dictionary" sap:VirtualizedContainerService.HintSize="397.6,135.2" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_1" Key="Varun" Value="29" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="397.6,60" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[EmployeeDetails(&quot;Varun&quot;)]" />
+    <maes:KeyExistsInDictionary x:TypeArguments="x:String, x:Int32" Dictionary="[EmployeeDetails]" DisplayName="Key exists in dictionary" sap:VirtualizedContainerService.HintSize="397.6,135.2" sap2010:WorkflowViewState.IdRef="KeyExistsInDictionary`2_1" Key="Varun" Result="[boolTemp]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="397.6,60" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Varun exists: &quot; + boolTemp.ToString()]" />
+    <maes:ValueExistsInDictionary x:TypeArguments="x:String, x:Int32" Dictionary="[EmployeeDetails]" DisplayName="Value exists in dictionary" sap:VirtualizedContainerService.HintSize="397.6,135.2" sap2010:WorkflowViewState.IdRef="ValueExistsInDictionary`2_1" Result="[boolTemp]" Value="29" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="397.6,60" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Value 29 exists: &quot; + boolTemp.ToString()]" />
+    <maes:AddToDictionary x:TypeArguments="x:String, x:Int32" Dictionary="[EmployeeDetails]" DisplayName="Add to dictionary" sap:VirtualizedContainerService.HintSize="397.6,135.2" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_2" Key="John" Value="50" />
+    <maes:GetFromDictionary x:TypeArguments="x:String, x:Int32" Dictionary="[EmployeeDetails]" DisplayName="Get from dictionary" sap:VirtualizedContainerService.HintSize="397.6,135.2" sap2010:WorkflowViewState.IdRef="GetFromDictionary`2_2" Key="John" Value="[intTemp]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="397.6,60" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[intTemp]" />
+    <maes:RemoveFromDictionary x:TypeArguments="x:String, x:Int32" Dictionary="[EmployeeDetails]" DisplayName="Remove from dictionary" sap:VirtualizedContainerService.HintSize="397.6,135.2" sap2010:WorkflowViewState.IdRef="RemoveFromDictionary`2_1" Key="Varun" Result="[boolTemp]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Boolean type of previous. Has been removed.&#xD;&#xA;&#xD;&#xA;Will output true, it has been removed." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="397.6,120" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[boolTemp]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MessageBox>
+    <maes:RemoveFromDictionary x:TypeArguments="x:String, x:Int32" Dictionary="[EmployeeDetails]" DisplayName="Remove from dictionary" sap:VirtualizedContainerService.HintSize="397.6,135.2" sap2010:WorkflowViewState.IdRef="RemoveFromDictionary`2_2" Key="Varun" Result="[boolTemp]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Boolean type of previous. Has been removed.&#xD;&#xA;&#xD;&#xA;Will show False because not removed. Already done so once" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="397.6,136" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[boolTemp]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MessageBox>
+    <maes:ClearDictionary x:TypeArguments="x:String, x:Int32" Dictionary="[EmployeeDetails]" DisplayName="Clear dictionary" sap:VirtualizedContainerService.HintSize="397.6,69.6" sap2010:WorkflowViewState.IdRef="ClearDictionary`2_1" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="should show error cause dictionary is cleared" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="397.6,91.2" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[EmployeeDetails(&quot;Varun&quot;)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MessageBox>
+  </Sequence>
+</Activity>
